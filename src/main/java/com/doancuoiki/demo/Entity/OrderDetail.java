@@ -2,6 +2,7 @@ package com.doancuoiki.demo.Entity;
 public class OrderDetail {
 	private Book book;
 	private Integer quantity;
+	private Integer total;
 	public Book getBook() {
 		return book;
 	}
@@ -15,5 +16,11 @@ public class OrderDetail {
 		this.quantity = quantity;
 	}
 	public OrderDetail() {}
+	public Integer getTotal() {
+		return total;
+	}
+	public void setTotal(Integer total) {
+		this.total = total;
+	}
 	
 }

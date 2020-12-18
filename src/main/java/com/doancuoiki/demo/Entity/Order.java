@@ -8,9 +8,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Order {
 	@Id
 	private String id;
+	private Customer customer;
 	private List<OrderDetail> orderlist;
 	private Integer total;
-	private String dateOrder;
 	public String getId() {
 		return id;
 	}
@@ -23,16 +23,17 @@ public class Order {
 	public void setTotal(Integer total) {
 		this.total = total;
 	}
-	public String getDateOrder() {
-		return dateOrder;
-	}
-	public void setDateOrder(String dateOrder) {
-		this.dateOrder = dateOrder;
-	}
 	public List<OrderDetail> getOrderlist() {
 		return orderlist;
 	}
 	public void setOrderlist(List<OrderDetail> orderlist) {
 		this.orderlist = orderlist;
+		
+	}
+	public Customer getCustomer() {
+		return customer;
+	}
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
 	}
 }
